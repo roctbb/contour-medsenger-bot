@@ -37,7 +37,7 @@ def init(data):
     else:
         contract.active = True
 
-    medsenger_api.send_message(contract.id,
+    medsenger_api.send_message(data.get('contract_id'),
                                'К каналу консультирования подключен интеллектуальный агент для глюкометров Contour. Просто отправьте в чат CSV файл из мобильного приложения (через меню "поделиться"), и мы автоматически положим все измерения в вашу медицинскую карту.',
                                only_patient=True)
 
