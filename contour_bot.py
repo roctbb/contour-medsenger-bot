@@ -89,7 +89,7 @@ def message(data):
                 if not max_time or max_time < time:
                     max_time = time
 
-                value = float(line[1])
+                value = float(line[1].replace(',', '.'))
 
                 if line[2] == "Натощак":
                     medsenger_api.add_record(contract.id, "glukose_fasting", value, record_time=time.timestamp())
