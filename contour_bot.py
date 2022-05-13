@@ -42,6 +42,10 @@ def init(data):
                                only_patient=True)
 
     db.session.commit()
+
+    medsenger_api.add_record(data.get('contract_id'), 'doctor_action',
+                             'Подключен прибор "Contour".')
+
     return "ok"
 
 
@@ -52,6 +56,10 @@ def remove(data):
     if c:
         c.active = False
         db.session.commit()
+
+    medsenger_api.add_record(data.get('contract_id'), 'doctor_action',
+                             'Отключен прибор "Contour".')
+
     return "ok"
 
 
