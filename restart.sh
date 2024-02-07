@@ -1,1 +1,1 @@
-supervisorctl restart agents-contour
+touch /etc/uwsgi/apps/contour.ini
