@@ -1,4 +1,5 @@
 sudo pip3 install -r requirements.txt
+sudo cp contour.ini /etc/uwsgi/apps/
 sudo cp agents_contour.conf /etc/supervisor/conf.d/
 sudo cp agents_contour_nginx.conf /etc/nginx/sites-enabled/
 sudo supervisorctl update
